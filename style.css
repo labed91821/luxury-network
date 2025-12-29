@@ -222,4 +222,26 @@ footer {
     height: 35px; /* FIXED SMALL HEIGHT */
     width: auto;
     filter: brightness(0) invert(1); margin-bottom: 10px; opacity: 0.8; 
+
 }
+/* --- LUXURY ANIMATIONS --- */
+
+/* 1. The Starting State (Invisible & Lower down) */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(40px); /* Pushed down 40px */
+    transition: all 1.2s ease; /* Very slow, smooth transition */
+}
+
+/* 2. The Ending State (Visible & In place) */
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* 3. Staggered Delays (For grid items appearing one by one) */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
