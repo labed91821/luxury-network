@@ -156,9 +156,18 @@ section { padding: 80px 5%; }
 footer { background: var(--black); color: #777; padding: 30px 5%; font-size: 0.8rem; position: relative; z-index: 100; margin-top: auto; }
 .footer-logo { height: 35px; width: auto; filter: brightness(0) invert(1); margin-bottom: 0; opacity: 0.8; }
 
-/* ANIMATIONS */
-.hidden { opacity: 0; filter: blur(5px); transform: translateY(40px); transition: all 1.2s ease; }
-.show { opacity: 1; filter: blur(0); transform: translateY(0); }
+/* --- LUXURY ANIMATIONS (FASTER) --- */
+.hidden { 
+    opacity: 0; 
+    filter: blur(5px); 
+    transform: translateY(30px); /* Reduced movement for snappier feel */
+    transition: all 0.6s ease;   /* Changed from 1.2s to 0.8s */
+}
+.show { 
+    opacity: 1; 
+    filter: blur(0); 
+    transform: translateY(0); 
+}
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
@@ -170,3 +179,4 @@ footer { background: var(--black); color: #777; padding: 30px 5%; font-size: 0.8
     .ceo-layout, .contact-split { grid-template-columns: 1fr; gap: 40px; }
     .hero-content { margin-top: 0; }
 }
+
