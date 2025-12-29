@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="IMG/LN.png">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection | Luxury Network</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="IMG/LN.png">
 </head>
 <body>
 
@@ -19,94 +20,50 @@
         </div>
     </nav>
 
-    <header class="gradient-header">
+    <header class="gradient-header hidden">
         <h1>The <span class="accent">Collection</span></h1>
         <p>A curated portfolio of Dubai's most significant assets.</p>
     </header>
 
     <section class="container">
-        <h2 style="margin-bottom: 40px;">Off-Plan <span class="accent">Projects</span></h2>
+        <h2 class="hidden" style="margin-bottom: 40px;">Off-Plan <span class="accent">Projects</span></h2>
         <div class="grid-fixed-2">
-            <div class="grey-box">
+            <div class="grey-box hidden">
                 <div class="card-img-box"><img src="IMG/offplan1.jpg" class="card-img"></div>
                 <h3>Palm Jebel Ali</h3>
                 <div class="card-details"><span>Villa</span> • <span style="color:var(--gold);">From 18M AED</span></div>
             </div>
-            <div class="grey-box">
+            <div class="grey-box hidden delay-100">
                 <div class="card-img-box"><img src="IMG/offplan2.jpg" class="card-img"></div>
                 <h3>Six Senses</h3>
                 <div class="card-details"><span>Penthouse</span> • <span style="color:var(--gold);">From 22M AED</span></div>
             </div>
-            <div class="grey-box">
+             <div class="grey-box hidden delay-200">
                 <div class="card-img-box"><img src="IMG/offplan3.jpg" class="card-img"></div>
                 <h3>Bugatti Residences</h3>
                 <div class="card-details"><span>Mansion</span> • <span style="color:var(--gold);">From 19M AED</span></div>
             </div>
-            <div class="grey-box">
+            <div class="grey-box hidden delay-300">
                 <div class="card-img-box"><img src="IMG/offplan4.jpg" class="card-img"></div>
                 <h3>241 Waterfront</h3>
                 <div class="card-details"><span>Dubai Islands</span> • <span style="color:var(--gold);">From 1.88M AED</span></div>
             </div>
         </div>
     </section>
-
-    <section class="container" style="padding-top: 0;">
-        <h2 style="margin-bottom: 40px;">Residential <span class="accent">Inventory</span></h2>
-        <div class="grid-fixed-2">
-            <div class="grey-box">
-                <div class="card-img-box"><img src="IMG/res1.jpg" class="card-img"></div>
-                <h3>Palm Frond N</h3>
-                <div class="card-details"><span>5 Beds</span> • <span style="color:var(--gold);">45M AED</span></div>
+    
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <img src="IMG/logo.png" class="footer-logo">
+                <p style="margin: 0;">&copy; 2025 Luxury Network.</p>
             </div>
-            <div class="grey-box">
-                <div class="card-img-box"><img src="IMG/res2.jpg" class="card-img"></div>
-                <h3>Downtown Views</h3>
-                <div class="card-details"><span>3 Beds</span> • <span style="color:var(--gold);">3.5M AED</span></div>
+            <div style="display: flex; gap: 20px;">
+                <a href="https://www.linkedin.com/in/charles-k-9035911b5/" target="_blank" style="text-decoration: none; color: #777; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s;">LinkedIn</a>
+                <a href="https://www.instagram.com/luxurynetwork.ae?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="text-decoration: none; color: #777; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s;">Instagram</a>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <div style="background: #111; color: white; padding: 80px 5%; margin-top: 50px;">
-        <div class="container">
-            <h2 style="margin-bottom: 40px; text-align: center;">Commercial <span class="accent">Division</span></h2>
-            
-            <div class="grid-fixed-2">
-                <div class="grey-box" style="background: rgba(255,255,255,0.05); border-color: #333;">
-                    <div class="card-img-box"><img src="IMG/com1.jpg" class="card-img"></div>
-                    <h3 style="color:white;">DIFC Full Floor</h3>
-                    <div class="card-details" style="border-color:#333; color:#aaa;">
-                        <span>Shell & Core</span> • <span style="color:var(--gold);">22M AED</span>
-                    </div>
-                </div>
-                <div class="grey-box" style="background: rgba(255,255,255,0.05); border-color: #333;">
-                    <div class="card-img-box"><img src="IMG/com2.jpg" class="card-img"></div>
-                    <h3 style="color:white;">Marina Retail</h3>
-                    <div class="card-details" style="border-color:#333; color:#aaa;">
-                        <span>Tenanted</span> • <span style="color:var(--gold);">1.2M AED</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
- <footer>
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-        
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="IMG/logo.png" class="footer-logo" style="margin-bottom: 0;">
-            <p style="margin: 0;">&copy; 2025 Luxury Network.</p>
-        </div>
-
-        <div style="display: flex; gap: 20px;">
-            <a href="https://www.linkedin.com/in/charles-k-9035911b5/" target="_blank" style="text-decoration: none; color: #777; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='#777'">LinkedIn</a>
-            <a href="https://www.instagram.com/luxurynetwork.ae?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="text-decoration: none; color: #777; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='#777'">Instagram</a>
-            <a href="privacy.html" style="text-decoration: none; color: #777; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='#777'">Privacy</a>
-        </div>
-    </div>
-</footer>
-
+    <script>const observer=new IntersectionObserver((e)=>{e.forEach((t)=>{t.isIntersecting&&t.target.classList.add("show")})});document.querySelectorAll(".hidden").forEach((e)=>observer.observe(e));</script>
 </body>
-
 </html>
-
-
