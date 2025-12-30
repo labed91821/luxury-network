@@ -173,10 +173,28 @@ footer { background: var(--black); color: #777; padding: 30px 5%; font-size: 0.8
 .delay-300 { transition-delay: 300ms; }
 
 /* RESPONSIVE */
+/* --- STRONG MOBILE FIX --- */
 @media (max-width: 768px) {
+    /* 1. Force all Grids to Stack Vertically */
+    .grid-fixed-2, .grid-fixed-3, .ceo-layout, .contact-split, .container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        min-width: 0 !important; /* Prevents overflow */
+        gap: 40px;
+    }
+
+    /* 2. Fix the Text Sizing so it doesn't break */
+    h1 { font-size: 2.5rem !important; }
+    h2 { font-size: 2rem !important; }
+    
+    /* 3. Fix the Margins so it doesn't touch the edges */
+    section { padding: 60px 20px !important; }
+    
+    /* 4. Hide the Desktop Navigation, Show Simple Menu Link (Optional) */
     .nav-links { display: none; } 
-    h1 { font-size: 2.5rem; }
-    .ceo-layout, .contact-split { grid-template-columns: 1fr; gap: 40px; }
-    .hero-content { margin-top: 0; }
+    
+    /* 5. Fix Image Heights */
+    .card-img-box, .team-img-box { height: 300px !important; }
 }
 
