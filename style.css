@@ -143,7 +143,14 @@ section { padding: 80px 5%; }
 .dev-carousel-wrap { background: #ffffff; padding: 60px 0; overflow: hidden; white-space: nowrap; position: relative; z-index: 10; }
 .dev-track { display: inline-block; animation: devScroll 40s linear infinite; }
 .dev-logo-box { display: inline-flex; align-items: center; justify-content: center; width: 200px; height: 100px; margin: 0 30px; background: transparent; }
-.dev-logo-box img { height: 50px; width: auto; object-fit: contain; transition: 0.3s; }
+/* FIX: Make all logos look optically the same size */
+.dev-logo-box img { 
+    height: 80px;         /* Increased from 50px to 80px */
+    width: 160px;         /* Fixed width to force uniformity */
+    object-fit: contain;  /* Ensures they don't stretch */
+    opacity: 0.8; 
+    transition: 0.3s; 
+}
 .dev-logo-box:hover img { transform: scale(1.1); }
 @keyframes devScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
@@ -175,14 +182,12 @@ footer { background: var(--black); color: #777; padding: 30px 5%; font-size: 0.8
 /* RESPONSIVE */
 /* --- STRONG MOBILE FIX --- */
 @media (max-width: 768px) {
-    /* 1. Force all Grids to Stack Vertically */
     .grid-fixed-2, .grid-fixed-3, .ceo-layout, .contact-split, .container {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        min-width: 0 !important; /* Prevents overflow */
-        gap: 40px;
+        display: flex !important; flex-direction: column !important; gap: 40px;
     }
+    .card-img-box { height: 300px !important; }
+    .nav-links { display: none; }
+}
 
     /* 2. Fix the Text Sizing so it doesn't break */
     h1 { font-size: 2.5rem !important; }
@@ -197,4 +202,5 @@ footer { background: var(--black); color: #777; padding: 30px 5%; font-size: 0.8
     /* 5. Fix Image Heights */
     .card-img-box, .team-img-box { height: 300px !important; }
 }
+
 
