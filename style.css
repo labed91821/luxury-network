@@ -1,4 +1,4 @@
-/* --- LUXURY NETWORK: MASTER STYLE (FINAL) --- */
+/* --- LUXURY NETWORK: MASTER STYLE (RESTORATION) --- */
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
 
 :root {
@@ -12,10 +12,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { 
-    height: 100%; 
-    scroll-behavior: smooth; /* Smooth Scrolling */
-}
+html { height: 100%; scroll-behavior: smooth; }
 
 /* LAYOUT */
 body { 
@@ -74,34 +71,12 @@ section { padding: 80px 5%; }
     text-align: center; max-width: 1200px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1);
 }
 .floating-panel-glass h2 { color: white; }
-
-.gradient-box-glass {
-    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(20,20,20,0.7));
-    backdrop-filter: blur(10px); color: white; padding: 100px 5%; 
-    text-align: center; border-radius: var(--radius);
-}
-.value-box-gradient {
-    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-    border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: var(--radius); transition: 0.3s;
-}
-.value-box-gradient:hover { background: rgba(255,255,255,0.08); transform: translateY(-5px); }
-.value-box-gradient h3 { color: var(--gold); }
-.value-box-gradient p { color: #ccc; }
-
-/* HEADERS */
-.gradient-header {
-    background: linear-gradient(to right, #111, #333); color: white;
-    padding: 150px 5% 80px; text-align: center;
-}
+.gradient-header { background: linear-gradient(to right, #111, #333); color: white; padding: 150px 5% 80px; text-align: center; }
 .gradient-header h1 { color: white; }
 
-/* GRIDS */
+/* GRIDS & CARDS */
 .grid-fixed-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .grid-fixed-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-@media (max-width: 1024px) { .grid-fixed-3 { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 768px) { .grid-fixed-2, .grid-fixed-3 { grid-template-columns: 1fr; } }
-
-/* CARDS */
 .grey-box {
     background: #fafafa; padding: 25px; border: 1px solid var(--border);
     border-radius: var(--radius); transition: 0.3s; position: relative; height: 100%;
@@ -119,88 +94,54 @@ section { padding: 80px 5%; }
     margin-bottom: 20px; overflow: hidden; 
 }
 .logo-frame img { height: 70px; width: auto; max-width: 85%; object-fit: contain; transition: 0.3s; }
-.logo-frame:hover img { transform: scale(1.05); }
 
-/* TEAM */
+/* TEAM & CONTACT */
 .ceo-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: flex-start; max-width: 1200px; margin: 0 auto; }
-.ceo-card { text-align: center; }
 .ceo-img-frame { height: 550px; border: 1px solid #000; padding: 10px; border-radius: var(--radius); margin-bottom: 20px; }
 .ceo-img-frame img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; object-position: top; }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .team-img-box { height: 420px; width: 100%; overflow: hidden; border-radius: 15px; margin-bottom: 15px; }
 .team-img-box img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: 0.5s ease; }
-
 .white-text { color: white !important; font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; }
 .gold-text { color: var(--gold) !important; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
-
-/* CAROUSELS */
-.carousel-container { overflow: hidden; white-space: nowrap; width: 100%; padding-bottom: 20px; }
-.carousel-track { display: inline-flex; gap: 30px; animation: scroll 25s linear infinite; }
-.carousel-card { width: 450px; flex-shrink: 0; white-space: normal; }
-@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
-
-/* DEV CAROUSEL */
-.dev-carousel-wrap { background: #ffffff; padding: 60px 0; overflow: hidden; white-space: nowrap; position: relative; z-index: 10; }
-.dev-track { display: inline-block; animation: devScroll 40s linear infinite; }
-.dev-logo-box { display: inline-flex; align-items: center; justify-content: center; width: 200px; height: 100px; margin: 0 30px; background: transparent; }
-/* FIX: Make all logos look optically the same size */
-.dev-logo-box img { 
-    height: 80px;         /* Increased from 50px to 80px */
-    width: 160px;         /* Fixed width to force uniformity */
-    object-fit: contain;  /* Ensures they don't stretch */
-    opacity: 0.8; 
-    transition: 0.3s; 
-}
-.dev-logo-box:hover img { transform: scale(1.1); }
-@keyframes devScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-/* CONTACT */
 .contact-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 80vh; gap: 20px; padding: 20px; }
 .contact-info { background: var(--black); color: white; padding: 80px 5%; border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; }
 .contact-form-area { background: #f9f9f9; padding: 80px 5%; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; }
+
+/* CAROUSELS */
+.carousel-container { overflow: hidden; white-space: nowrap; width: 100%; padding-bottom: 20px; }
+.carousel-track { display: inline-flex; gap: 30px; animation: scroll 35s linear infinite; } /* Slower for elegance */
+.carousel-card { width: 450px; flex-shrink: 0; white-space: normal; }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+/* DEV CAROUSEL (FIXED SIZING) */
+.dev-carousel-wrap { background: #ffffff; padding: 60px 0; overflow: hidden; white-space: nowrap; position: relative; z-index: 10; }
+.dev-track { display: inline-block; animation: devScroll 40s linear infinite; }
+.dev-logo-box { display: inline-flex; align-items: center; justify-content: center; width: 200px; height: 100px; margin: 0 30px; }
+.dev-logo-box img { height: 80px; width: 160px; object-fit: contain; opacity: 0.8; transition: 0.3s; }
+.dev-logo-box:hover img { transform: scale(1.1); opacity: 1; }
+@keyframes devScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* FOOTER */
 footer { background: var(--black); color: #777; padding: 30px 5%; font-size: 0.8rem; position: relative; z-index: 100; margin-top: auto; }
 .footer-logo { height: 35px; width: auto; filter: brightness(0) invert(1); margin-bottom: 0; opacity: 0.8; }
 
-/* --- LUXURY ANIMATIONS (FASTER) --- */
-.hidden { 
-    opacity: 0; 
-    filter: blur(5px); 
-    transform: translateY(30px); /* Reduced movement for snappier feel */
-    transition: all 0.6s ease;   /* Changed from 1.2s to 0.8s */
-}
-.show { 
-    opacity: 1; 
-    filter: blur(0); 
-    transform: translateY(0); 
-}
+/* ANIMATIONS (SMOOTH & FAST) */
+.hidden { opacity: 0; filter: blur(5px); transform: translateY(30px); transition: all 0.8s ease; }
+.show { opacity: 1; filter: blur(0); transform: translateY(0); }
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
 
-/* RESPONSIVE */
-/* --- STRONG MOBILE FIX --- */
+/* RESPONSIVE (STRONG FIX) */
 @media (max-width: 768px) {
     .grid-fixed-2, .grid-fixed-3, .ceo-layout, .contact-split, .container {
-        display: flex !important; flex-direction: column !important; gap: 40px;
+        display: flex !important; flex-direction: column !important; width: 100% !important; min-width: 0 !important; gap: 40px;
     }
-    .card-img-box { height: 300px !important; }
-    .nav-links { display: none; }
-}
-
-    /* 2. Fix the Text Sizing so it doesn't break */
     h1 { font-size: 2.5rem !important; }
     h2 { font-size: 2rem !important; }
-    
-    /* 3. Fix the Margins so it doesn't touch the edges */
     section { padding: 60px 20px !important; }
-    
-    /* 4. Hide the Desktop Navigation, Show Simple Menu Link (Optional) */
     .nav-links { display: none; } 
-    
-    /* 5. Fix Image Heights */
     .card-img-box, .team-img-box { height: 300px !important; }
+    .carousel-card { width: 85vw; } /* Fix carousel width on phone */
 }
-
-
