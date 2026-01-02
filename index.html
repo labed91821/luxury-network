@@ -77,31 +77,30 @@
             </div>
         </section>
 
-        <section class="container" style="overflow: hidden; padding-top: 0;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;">
-                <h2 class="hidden">Investment <span class="accent">Grade</span></h2>
-                <a href="collection.html" class="btn" style="padding: 10px 25px;">View All</a>
+       <section class="container" style="overflow: hidden; padding-top: 0;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; padding-right: 10px;">
+        <h2 class="hidden">Investment <span class="accent">Grade</span></h2>
+        <a href="collection.html" class="btn" style="padding: 10px 25px;">View All</a>
+    </div>
+    <div class="carousel-container hidden">
+        <div class="carousel-track">
+            <div class="grey-box carousel-card">
+                <div class="card-img-box"><img src="IMG/comm1.jpg" class="card-img"></div>
+                <h3>Business Bay Tower</h3>
+                <div class="card-details"><span>Full Floor</span> <span>11,000 Sq.Ft</span> <span style="color:var(--gold);">18M AED</span></div>
             </div>
-            <div class="carousel-container hidden">
-                <div class="carousel-track">
-                    <div class="grey-box carousel-card">
-                        <div class="card-img-box"><img src="IMG/comm1.jpg" class="card-img"></div>
-                        <h3>Business Bay Tower</h3>
-                        <div class="card-details"><span>Full Floor</span> <span>11,000 Sq.Ft</span> <span style="color:var(--gold);">18M AED</span></div>
-                    </div>
-                    <div class="grey-box carousel-card">
-                        <div class="card-img-box"><img src="IMG/comm2.jpg" class="card-img"></div>
-                        <h3>DIFC Retail</h3>
-                        <div class="card-details"><span>Shell & Core</span> <span>3,500 Sq.Ft</span> <span style="color:var(--gold);">12M AED</span></div>
-                    </div>
-                    <div class="grey-box carousel-card">
-                        <div class="card-img-box"><img src="IMG/comm1.jpg" class="card-img"></div>
-                        <h3>Business Bay Tower</h3>
-                        <div class="card-details"><span>Full Floor</span> <span>11,000 Sq.Ft</span> <span style="color:var(--gold);">18M AED</span></div>
-                    </div>
-                </div>
             </div>
-        </section>
+    </div>
+</section>
+
+<div class="dev-carousel-wrap">
+    <div class="dev-track">
+        <div class="dev-logo-box"><img src="IMG/dev_emaar.png" style="max-height: 60px; width: auto;"></div>
+        <div class="dev-logo-box"><img src="IMG/dev_nakheel.png" style="max-height: 60px; width: auto;"></div>
+        <div class="dev-logo-box"><img src="IMG/dev_meraas.png" style="max-height: 60px; width: auto;"></div>
+        <div class="dev-logo-box"><img src="IMG/dev_damac.png" style="max-height: 60px; width: auto;"></div>
+        </div>
+</div>
 
         <section class="container" style="overflow: hidden; padding-top: 0;">
             <h2 class="hidden" style="margin-bottom: 30px;">Curated <span class="accent">Off-Plan</span></h2>
@@ -169,3 +168,4 @@
     <script>const observer=new IntersectionObserver((e)=>{e.forEach((t)=>{t.isIntersecting&&t.target.classList.add("show")})},{threshold:0.05});document.querySelectorAll(".hidden").forEach((e)=>observer.observe(e));</script>
 </body>
 </html>
+
