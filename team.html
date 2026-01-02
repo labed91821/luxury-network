@@ -65,54 +65,65 @@
         </div>
     </div>
 
-    <section class="container" style="background: #fafafa; border-top: 1px solid #eee;">
-        <h2 class="hidden" style="margin-bottom: 50px; text-align: center;">The <span class="accent">Consultants</span></h2>
-        
-        <div class="grid-fixed-3">
-            <div class="member-card hidden">
-                <img src="IMG/team4.jpg">
-                <div class="member-info">
-                    <h3>Zulfiqar Ali <img src="https://flagcdn.com/w20/ca.png" class="flag-icon"></h3>
-                    <p style="font-size: 0.8rem; color: #777;">President</p>
-                </div>
-            </div>
-            <div class="member-card hidden delay-100">
-                <img src="IMG/team1.jpg">
-                <div class="member-info">
-                    <h3>Ahmet Riza <img src="https://flagcdn.com/w20/ca.png" class="flag-icon"><img src="https://flagcdn.com/w20/us.png" class="flag-icon"></h3>
-                    <p style="font-size: 0.8rem; color: #777;">Associate & President USA/CAN</p>
-                </div>
-            </div>
-            <div class="member-card hidden delay-200">
-                <img src="IMG/team3.jpg">
-                <div class="member-info">
-                    <h3>Merzan Hessou <img src="https://flagcdn.com/w20/de.png" class="flag-icon"></h3>
-                    <p style="font-size: 0.8rem; color: #777;">Sales Manager</p>
-                </div>
-            </div>
-            <div class="member-card hidden">
-                <img src="IMG/team5.jpg">
-                <div class="member-info">
-                    <h3>Ramal Ali <img src="https://flagcdn.com/w20/ca.png" class="flag-icon"></h3>
-                    <p style="font-size: 0.8rem; color: #777;">Sales Manager</p>
-                </div>
-            </div>
-            <div class="member-card hidden delay-100">
-                <img src="IMG/team2.jpg">
-                <div class="member-info">
-                    <h3>Berna Aytinas <img src="https://flagcdn.com/w20/de.png" class="flag-icon"><img src="https://flagcdn.com/w20/tr.png" class="flag-icon"></h3>
-                    <p style="font-size: 0.8rem; color: #777;">Holiday Homes</p>
-                </div>
-            </div>
-            <div class="member-card hidden delay-200">
-                <img src="IMG/team6.jpg">
-                <div class="member-info">
-                    <h3>Nadiia Maximyuk <img src="https://flagcdn.com/w20/ua.png" class="flag-icon"></h3>
-                    <p style="font-size: 0.8rem; color: #777;">Sales Manager</p>
-                </div>
+ <section class="container" style="background: #fafafa; border-top: 1px solid #eee; padding-top: 80px;">
+    <h2 class="hidden" style="margin-bottom: 60px; text-align: center;">The <span class="accent">Consultants</span></h2>
+    
+    <div class="team-grid">
+        <div class="member-card hidden">
+            <img src="IMG/team4.jpg" alt="Zulfiqar Ali">
+            <div class="member-info">
+                <h3>Zulfiqar Ali <img src="https://flagcdn.com/h24/ca.png" class="flag-icon"></h3>
+                <p>President</p>
             </div>
         </div>
-    </section>
+
+        <div class="member-card hidden delay-100">
+            <img src="IMG/team1.jpg" alt="Ahmet Riza">
+            <div class="member-info">
+                <h3>Ahmet Riza 
+                    <img src="https://flagcdn.com/h24/ca.png" class="flag-icon">
+                    <img src="https://flagcdn.com/h24/us.png" class="flag-icon">
+                </h3>
+                <p>Associate & President USA/CAN</p>
+            </div>
+        </div>
+
+        <div class="member-card hidden delay-200">
+            <img src="IMG/team3.jpg" alt="Merzan Hessou">
+            <div class="member-info">
+                <h3>Merzan Hessou <img src="https://flagcdn.com/h24/de.png" class="flag-icon"></h3>
+                <p>Sales Manager</p>
+            </div>
+        </div>
+
+        <div class="member-card hidden">
+            <img src="IMG/team5.jpg" alt="Ramal Ali">
+            <div class="member-info">
+                <h3>Ramal Ali <img src="https://flagcdn.com/h24/ca.png" class="flag-icon"></h3>
+                <p>Sales Manager</p>
+            </div>
+        </div>
+
+        <div class="member-card hidden delay-100">
+            <img src="IMG/team2.jpg" alt="Berna Aytinas">
+            <div class="member-info">
+                <h3>Berna Aytinas 
+                    <img src="https://flagcdn.com/h24/de.png" class="flag-icon">
+                    <img src="https://flagcdn.com/h24/tr.png" class="flag-icon">
+                </h3>
+                <p>Holiday Homes Coordinator</p>
+            </div>
+        </div>
+
+        <div class="member-card hidden delay-200">
+            <img src="IMG/team6.jpg" alt="Nadiia Maximyuk">
+            <div class="member-info">
+                <h3>Nadiia Maximyuk <img src="https://flagcdn.com/h24/ua.png" class="flag-icon"></h3>
+                <p>Sales Manager</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer>
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
@@ -142,3 +153,4 @@
     <script>const observer=new IntersectionObserver((e)=>{e.forEach((t)=>{t.isIntersecting&&t.target.classList.add("show")})},{threshold:0.05});document.querySelectorAll(".hidden").forEach((e)=>observer.observe(e));</script>
 </body>
 </html>
+
