@@ -109,92 +109,105 @@ section { padding: 80px 5%; }
 
 /* --- TEAM SECTION (LUXURY CORRECTION) --- */
 
-/* 1. THE GRID */
-.team-grid { 
+/* --- TEAM SECTION (LUXURY REPAIR) --- */
+
+/* 1. The Grid: Adds breathing room */
+.grid-fixed-3 { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
-    gap: 40px; /* More space = More Luxury */
-    margin-top: 50px;
+    gap: 50px; /* Increased gap for luxury whitespace */
+    justify-items: center; /* Centers the cards in their columns */
 }
 
-/* 2. THE CARD (Sharp & Clean) */
+/* 2. The Card: Slimmer & Sharper */
 .member-card {
     background: #ffffff;
-    border: 1px solid #e0e0e0; /* Thin, crisp border */
-    border-radius: 0px; /* SHARP CORNERS = LUXURY */
+    border: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 320px; /* FIX: Prevents them from being "Huge" */
+    border-radius: 2px; /* Very subtle radius, almost sharp */
     overflow: hidden; 
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
-    /* No shadow by default for a clean "Magazine" look */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
 }
 
-/* 3. HOVER EFFECT (Lift & Gold) */
 .member-card:hover { 
     transform: translateY(-8px); 
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15); /* Soft Gold Shadow */
-    border-color: var(--gold); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+    border-color: var(--gold);
 }
 
-/* 4. THE IMAGE (Full Color, No Zoom) */
+/* 3. The Image: Portrait Mode (Magazine Style) */
 .member-card img { 
     width: 100%; 
-    height: 450px; /* Taller portrait ratio */
+    height: 420px; /* Taller fixed height */
     object-fit: cover; 
     object-position: top center; 
-    filter: none; /* FORCE COLOR ALWAYS */
+    filter: grayscale(100%); /* Keeps the elegant B&W look */
     transition: 0.5s ease;
 }
 
-/* 5. TYPOGRAPHY (Serif for Names) */
+/* Reveal color on hover */
+.member-card:hover img {
+    filter: grayscale(0%);
+}
+
+/* 4. Typography & Layout */
 .member-info { 
     padding: 25px 20px; 
     text-align: center; 
     background: #fff;
-    border-top: 1px solid #f4f4f4;
+    border-top: 1px solid #f9f9f9;
 }
 
 .member-info h3 {
-    font-family: 'Bodoni Moda', serif; /* Luxury Font */
-    font-size: 1.2rem;
+    font-family: 'Bodoni Moda', serif; 
+    font-size: 1.1rem;
     color: #000;
     margin-bottom: 8px;
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .member-info p {
     font-family: 'Inter', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: #888;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
+    margin: 0;
 }
 
-/* 6. THE FLAGS (Monochrome Lux) */
+/* 5. The Flag: "Silver" Lux Style */
 .flag-icon { 
-    width: 18px; 
+    width: 16px; 
     height: auto; 
-    border-radius: 0px; /* Sharp flags */
-    filter: grayscale(100%); /* B&W by default */
-    opacity: 0.6;
-    transition: 0.3s;
+    border-radius: 1px;
+    filter: grayscale(100%) opacity(0.5); /* Silver/Grey by default */
+    transition: 0.4s;
+    box-shadow: none;
 }
 
-/* Color reveal on hover */
+/* Flag shines on hover */
 .member-card:hover .flag-icon {
-    filter: grayscale(0%);
-    opacity: 1;
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
 }
 
-/* MOBILE RESPONSIVENESS */
+/* Mobile Fix */
 @media (max-width: 900px) {
-    .team-grid { grid-template-columns: 1fr; }
-    .member-card img { height: 400px; }
-}
+    .grid-fixed-3 { 
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    .member-card {
+        max-width: 350px; /* Slightly wider on mobile for readability */
+    }
 }
 
 /* CAROUSELS (Auto) */
@@ -325,4 +338,5 @@ footer { background: var(--black); color: #888; padding: 60px 5% 100px; font-siz
     max-height: 500px !important;
     width: 100% !important;
 }
+
 
