@@ -20,17 +20,18 @@
     </nav>
 
     <div style="padding: 120px 5% 60px;">
-        <div class="grid-2">
-            <div class="glass-box hidden" style="text-align: center;">
+        <div class="grid-2" style="gap: 60px;"> <div class="glass-box hidden" style="text-align: center;">
                 <p style="letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; color: var(--gold); font-size: 0.8rem;">Advisory</p>
                 <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Invest With Us</h3>
                 <a href="contact.html" class="btn btn-gold">Consultation</a>
             </div>
+
             <div class="glass-box hidden delay-100" style="text-align: center;">
                 <p style="letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; color: var(--gold); font-size: 0.8rem;">Seller's Mandate</p>
                 <h3 style="margin-bottom: 25px; font-size: 1.8rem;">List Your Property</h3>
-                <a href="contact.html" class="btn">Submit Listing</a>
+                <a href="contact.html" class="btn" style="border: 1px solid var(--black);">Submit Listing</a>
             </div>
+
         </div>
     </div>
 
@@ -117,4 +118,5 @@
         const observer=new IntersectionObserver((e)=>{e.forEach((t)=>{t.isIntersecting&&t.target.classList.add("show")})},{threshold:0.05});document.querySelectorAll(".hidden").forEach((e)=>observer.observe(e));
     </script>
 </body>
+
 </html>
